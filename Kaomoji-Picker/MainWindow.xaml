@@ -1,0 +1,91 @@
+﻿<Window x:Class="Kaomoji_Picker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kaomoji_Picker"
+        mc:Ignorable="d" Padding="0" Height="400" Width="500" WindowStyle="None" ResizeMode="NoResize">
+    <Grid>
+        <Grid Margin="0,0,0,364" Background="White">
+            <Border BorderBrush="#cccedb" BorderThickness="0,0,0,1"/>
+            <Button x:Name="CloseButton" Style="{StaticResource CloseButton}" Content="&#xE106;" Click="CloseButton_Click" Margin="457,3,3,3"/>
+            <Button x:Name="HideButton" Style="{StaticResource HideButton}" Content="ㅡ" Click="HideButton_Click" Margin="417,3,43,3"/>
+            <Button x:Name="PinButton" Style="{StaticResource HideButton}" Content="&#xE718;" Click="PinButton_Click" Margin="377,3,83,3" FontFamily="Segoe MDL2 Assets" FontSize="14"/>
+            <Label Content="Kaomoji Picker" Margin="0,0,404,0" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="36" Width="96"/>
+        </Grid>
+        <Grid Margin="0,36,0,319">
+            <Border BorderBrush="#cccedb" BorderThickness="0,0,0,1"/>
+            <Button Content="〔'∇｀〕" Style="{StaticResource NavButton}" Margin="1,0,416,1" Click="NavButton_Click" Tag="0"/>
+            <Button Content="(ﾟヘﾟ)" Style="{StaticResource NavButton}" Margin="84,0,333,1" Click="NavButton_Click" Tag="1"/>
+            <Button Content="(〃▽〃)" Style="{StaticResource NavButton}" Margin="167,0,250,1" Click="NavButton_Click" Tag="2"/>
+            <Button Content="(ノдヽ)" Style="{StaticResource NavButton}" Margin="250,0,167,1" Click="NavButton_Click" Tag="3"/>
+            <Button Content="ح˚௰˚づ" Style="{StaticResource NavButton}" Margin="333,0,84,1" Click="NavButton_Click" Tag="4"/>
+            <Button Content="โ๏∀๏ใ" Style="{StaticResource NavButton}" Margin="416,0,1,1" Click="NavButton_Click" Tag="5"/>
+        </Grid>
+        <ScrollViewer x:Name="kaoViewer" Margin="1,81,1,0" VerticalScrollBarVisibility="Hidden">
+            <Grid Height="1000" Background="#d5f1e3">
+                <Button x:Name="kaoBtn1"  Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="('∀｀）"  Tag="('∀｀）" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <Button x:Name="kaoBtn2"  Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="（＾∀＾）" Tag="（＾∀＾）" Height="50" VerticalAlignment="Top" Margin="166,0"/>
+                <Button x:Name="kaoBtn3"  Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(｀▽')"  Tag="(｀▽')" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                <Button x:Name="kaoBtn4"  Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="('w｀*)"  Tag="('w｀*)" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,50,0,0"/>
+                <Button x:Name="kaoBtn5"  Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(*'∇｀*)"  Tag="(*'∇｀*)" Height="50" Width="166" VerticalAlignment="Top" Margin="166,50,166,0"/>
+                <Button x:Name="kaoBtn6"  Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="（●＞ω＜●）"  Tag="（●＞ω＜●）" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,50,0,0"/>
+                <Button x:Name="kaoBtn7"  Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(≧∀≦ゞ"  Tag="(≧∀≦ゞ" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,100,0,0"/>
+                <Button x:Name="kaoBtn8"  Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="(≧∇≦)b"  Tag="(≧∇≦)b" Height="50" Width="166" VerticalAlignment="Top" Margin="166,100,166,0"/>
+                <Button x:Name="kaoBtn9"  Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(°∀°)ゝ'"  Tag="(°∀°)ゝ'" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,100,0,0"/>
+                <Button x:Name="kaoBtn10" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="(=ﾟ▽ﾟ)/" Tag="(=ﾟ▽ﾟ)/" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,150,0,0"/>
+                <Button x:Name="kaoBtn11" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(＞Д＜)ゝ'" Tag="(＞Д＜)ゝ'" Height="50" Width="166" VerticalAlignment="Top" Margin="166,150,166,0"/>
+                <Button x:Name="kaoBtn12" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="(ｏ'ｖ｀ｂ)ｂ" Tag="(ｏ'ｖ｀ｂ)ｂ" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,150,0,0"/>
+                <Button x:Name="kaoBtn13" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(　'∀｀)b" Tag="(　'∀｀)b" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,200,0,0"/>
+                <Button x:Name="kaoBtn14" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="(o^-')b" Tag="(o^-')b" Height="50" Width="166" VerticalAlignment="Top" Margin="166,200,166,0"/>
+                <Button x:Name="kaoBtn15" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="ヾ(＾∇＾)" Tag="ヾ(＾∇＾)" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,200,0,0"/>
+                <Button x:Name="kaoBtn16" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="(≧∇≦)/" Tag="(≧∇≦)/" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,250,0,0"/>
+                <Button x:Name="kaoBtn17" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(。･∀･)ﾉ" Tag="(。･∀･)ﾉ" Height="50" Width="166" VerticalAlignment="Top" Margin="166,250,166,0"/>
+                <Button x:Name="kaoBtn18" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="( ﾟ▽ﾟ)/" Tag="( ﾟ▽ﾟ)/" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,250,0,0"/>
+                <Button x:Name="kaoBtn19" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="ヾ(・ω・ｏ)" Tag="ヾ(・ω・ｏ)" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,300,0,0"/>
+                <Button x:Name="kaoBtn20" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="ヾ('￢｀)ﾉ" Tag="ヾ('￢｀)ﾉ" Height="50" Width="166" VerticalAlignment="Top" Margin="166,300,166,0"/>
+                <Button x:Name="kaoBtn21" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(खਉख)" Tag="(खਉख)" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,300,0,0"/>
+                <Button x:Name="kaoBtn22" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="(ಡ艸ಡ)" Tag="(ಡ艸ಡ)" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,350,0,0"/>
+                <Button x:Name="kaoBtn23" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="（＞ｙ＜）" Tag="（＞ｙ＜）" Height="50" Width="166" VerticalAlignment="Top" Margin="166,350,166,0"/>
+                <Button x:Name="kaoBtn24" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="(Ŏ艸Ŏ)" Tag="(Ŏ艸Ŏ)" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,350,0,0"/>
+                <Button x:Name="kaoBtn25" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(^ц^ )" Tag="(^ц^ )" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,400,0,0"/>
+                <Button x:Name="kaoBtn26" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="（　'∀｀）" Tag="（　'∀｀）" Height="50" Width="166" VerticalAlignment="Top" Margin="166,400,166,0"/>
+                <Button x:Name="kaoBtn27" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="（≧ｙ≦＊）" Tag="（≧ｙ≦＊）" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,400,0,0"/>
+                <Button x:Name="kaoBtn28" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="(*'∀｀）" Tag="(*'∀｀）" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,450,0,0"/>
+                <Button x:Name="kaoBtn29" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="（'υ｀）" Tag="（'υ｀）" Height="50" Width="166" VerticalAlignment="Top" Margin="166,450,166,0"/>
+                <Button x:Name="kaoBtn30" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="(･∀･)" Tag="(･∀･)" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,450,0,0"/>
+                <Button x:Name="kaoBtn31" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="('ｖ｀)" Tag="('ｖ｀)" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,500,0,0"/>
+                <Button x:Name="kaoBtn32" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="(・∀・｀；)" Tag="(・∀・｀；)" Height="50" Width="166" VerticalAlignment="Top" Margin="166,500,166,0"/>
+                <Button x:Name="kaoBtn33" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(･ω･)v" Tag="(･ω･)v" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,500,0,0"/>
+                <Button x:Name="kaoBtn34" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="(*ゝ∀･)v" Tag="(*ゝ∀･)v" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,550,0,0"/>
+                <Button x:Name="kaoBtn35" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(●≧ω≦)9" Tag="(●≧ω≦)9" Height="50" Width="166" VerticalAlignment="Top" Margin="166,550,166,0"/>
+                <Button x:Name="kaoBtn36" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="ヽ(ﾟ∀｡)ﾉ" Tag="ヽ(ﾟ∀｡)ﾉ" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,550,0,0"/>
+                <Button x:Name="kaoBtn37" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="＼\\٩( 'ω' )و //／" Tag="＼\\٩( 'ω' )و //／" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,600,0,0"/>
+                <Button x:Name="kaoBtn38" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="⊙▽⊙" Tag="⊙▽⊙" Height="50" Width="166" VerticalAlignment="Top" Margin="166,600,166,0"/>
+                <Button x:Name="kaoBtn39" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="（＾ｖ＾）" Tag="（＾ｖ＾）" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,600,0,0"/>
+                <Button x:Name="kaoBtn40" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="〔'∇｀〕" Tag="〔'∇｀〕" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,650,0,0"/>
+                <Button x:Name="kaoBtn41" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(＾ω＾)" Tag="(＾ω＾)" Height="50" Width="166" VerticalAlignment="Top" Margin="166,650,166,0"/>
+                <Button x:Name="kaoBtn42" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="ヽ(ヅ)ノ" Tag="ヽ(ヅ)ノ" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,650,0,0"/>
+                <Button x:Name="kaoBtn43" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(ᗒᗨᗕ)" Tag="(ᗒᗨᗕ)" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,700,0,0"/>
+                <Button x:Name="kaoBtn44" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="≧ω≦" Tag="≧ω≦" Height="50" Width="166" VerticalAlignment="Top" Margin="166,700,166,0"/>
+                <Button x:Name="kaoBtn45" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(⊙ᗜ⊙)" Tag="(⊙ᗜ⊙)" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,700,0,0"/>
+                <Button x:Name="kaoBtn46" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="୧⍢⃝୨" Tag="୧⍢⃝୨" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,750,0,0"/>
+                <Button x:Name="kaoBtn47" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(≧∇≦*)" Tag="(≧∇≦*)" Height="50" Width="166" VerticalAlignment="Top" Margin="166,750,166,0"/>
+                <Button x:Name="kaoBtn48" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="ヽ(＾Д＾)ﾉ" Tag="ヽ(＾Д＾)ﾉ" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,750,0,0"/>
+                <Button x:Name="kaoBtn49" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="ƪ(•◡•ƪ)&quot;ょぃょぃ" Tag="ƪ(•◡•ƪ)&quot;ょぃょぃ" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,800,0,0"/>
+                <Button x:Name="kaoBtn50" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="いくぞ!٩(ˊᗜˋ*) و" Tag="いくぞ!٩(ˊᗜˋ*) و" Height="50" Width="166" VerticalAlignment="Top" Margin="166,800,166,0"/>
+                <Button x:Name="kaoBtn51" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="₍₍ (ง ˘ω˘ )ว ⁾⁾　ｽﾔｯ ｽﾔｯ" Tag="₍₍ (ง ˘ω˘ )ว ⁾⁾　ｽﾔｯ ｽﾔｯ" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,800,0,0"/>
+                <Button x:Name="kaoBtn52" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="ヾ(〃l _ l)ﾉﾞ" Tag="ヾ(〃l _ l)ﾉﾞ" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,850,0,0"/>
+                <Button x:Name="kaoBtn53" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="⁽⁽◝( ˙ ꒳ ˙ )◜⁾⁾" Tag="⁽⁽◝( ˙ ꒳ ˙ )◜⁾⁾" Height="50" Width="166" VerticalAlignment="Top" Margin="166,850,166,0"/>
+                <Button x:Name="kaoBtn54" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="₍₍ ◝( 'ω' )◟ ⁾⁾" Tag="₍₍ ◝( 'ω' )◟ ⁾⁾" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,850,0,0"/>
+                <Button x:Name="kaoBtn55" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="(ර⍵ර)✧" Tag="(ර⍵ර)✧" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,900,0,0"/>
+                <Button x:Name="kaoBtn56" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="◞( ､*'▿`)､" Tag="◞( ､*'▿`)､" Height="50" Width="166" VerticalAlignment="Top" Margin="166,900,166,0"/>
+                <Button x:Name="kaoBtn57" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="꒰ ∩'∇ `∩꒱" Tag="꒰ ∩'∇ `∩꒱" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,900,0,0"/>
+                <Button x:Name="kaoBtn58" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="(੭•̀ᴗ•̀)੭" Tag="(੭•̀ᴗ•̀)੭" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,950,0,0"/>
+                <Button x:Name="kaoBtn59" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton1}"  Content="ɷ◡ɷ" Tag="ɷ◡ɷ" Height="50" Width="166" VerticalAlignment="Top" Margin="166,950,166,0"/>
+                <Button x:Name="kaoBtn60" Click="KaoBtn_Click" Style="{StaticResource KaomojiButton2}" Content="（ꉺᗜꉺ）" Tag="（ꉺᗜꉺ）" Height="50" Width="166" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,950,0,0"/>
+            </Grid>
+        </ScrollViewer>
+        <Border BorderBrush="#cccedb" BorderThickness="1"/>
+    </Grid>
+</Window>
