@@ -5,7 +5,7 @@ Kaomoji (Japanese Emoji) picker program
 Clicking on the Emoji button will copy it.
 
 ## Screenshot
-![Kaomoji Program](images/kaomoji.png)
+![Kaomoji Program](images/Kaomoji.png)
 
 ## License
 Copyright 2020. REMK all right reserved
