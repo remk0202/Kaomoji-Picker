@@ -1,3 +1,7 @@
 .vs
 bin/
 obj/
+Kaomoji-Picker/bin
+Kaomoji-Picker/obj
+Kaomoji-Picker\Kaomoji-Picker
+Kaomoji-Picker\Kaomoji-Picker.user
