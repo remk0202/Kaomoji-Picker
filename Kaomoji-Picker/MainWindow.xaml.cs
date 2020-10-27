@@ -18,28 +18,28 @@ namespace Kaomoji_Picker
             this.DragMove();
         }
 
-        private void CloseButton_Click(object sender, RoutedEventArgs e)
-        {
-            GetWindow(this).Close();
-        }
-
-        private void HideButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.WindowState = WindowState.Minimized;
-        }
-
-        private void PinButton_Click(object sender, RoutedEventArgs e)
+        private void pinned_button_Click(object sender, RoutedEventArgs e)
         {
             if (this.Topmost != true)
             {
                 this.Topmost = true;
-                PinButton.Content = "\xE77A";
+                pinned_button.Content = "\xE77A";
             }
             else
             {
                 this.Topmost = false;
-                PinButton.Content = "\xE718";
+                pinned_button.Content = "\xE718";
             }
+        }
+
+        private void minimize_button_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void close_button_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Window.GetWindow(this).Close();
         }
 
         private void KaoBtn_Click(object sender, RoutedEventArgs e)
