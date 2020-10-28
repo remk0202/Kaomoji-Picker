@@ -1,8 +1,5 @@
-# Kaomoji-picker
-Kaomoji (Japanese Emoji) picker program
-
-## How to use
-Clicking on the Emoji button will copy it.
+# Kaomoji picker
+kaomoji (japanese emoji) picker program.
 
 ## Screenshot
 ![Kaomoji Program](images/Kaomoji.png)
